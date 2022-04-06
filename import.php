@@ -41,7 +41,7 @@
     require_login($course_id);
     // $PAGE, $USER, $COURSE, and other globals now set
     // up, check the capabilities
-    require_capability('enrol/manual:enrol', $PAGE->context);
+    //require_capability('enrol/manual:enrol', $PAGE->context);
     // Determine if they can manage groups
     $canmanagegroups = has_capability('moodle/course:managegroups', $PAGE->context);
 
