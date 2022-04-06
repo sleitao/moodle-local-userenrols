@@ -73,9 +73,9 @@
             $roles = HTML_QuickForm::arrayMerge(array(0 => get_string('LBL_NO_ROLE_ID', local_userenrols_plugin::PLUGIN_NAME)),
                                                 get_assignable_roles($this->_customdata['data']->context, ROLENAME_BOTH));
             $this->_form->addElement('select', local_userenrols_plugin::FORMID_ROLE_ID, get_string('LBL_ROLE_ID', local_userenrols_plugin::PLUGIN_NAME), $roles);
-            $this->_form->setDefault(local_userenrols_plugin::FORMID_ROLE_ID, $this->_customdata['data']->default_role_id);
+            $this->_form->setDefault(local_userenrols_plugin::FORMID_ROLE_ID, 0); //'No Enrollments' como default 
             $this->_form->addHelpButton(local_userenrols_plugin::FORMID_ROLE_ID, 'LBL_ROLE_ID', local_userenrols_plugin::PLUGIN_NAME);
-            $this->_form->disabledIf(local_userenrols_plugin::FORMID_ROLE_ID, local_userenrols_plugin::FORMID_METACOURSE, 'eq', '1');
+            $this->_form->disabledIf(local_userenrols_plugin::FORMID_ROLE_ID, local_userenrols_plugin::FORMID_USER_ID_FIELD, 'neq', '10'); //Escolha desativada
 
 
             // Conditionally based on user capability
