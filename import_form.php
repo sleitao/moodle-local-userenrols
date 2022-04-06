@@ -85,8 +85,9 @@
                 //$this->_form->addElement('header', 'identity', get_string('LBL_GROUP_OPTIONS', local_userenrols_plugin::PLUGIN_NAME));
 
                 $this->_form->addElement('selectyesno', local_userenrols_plugin::FORMID_GROUP, get_string('LBL_GROUP', local_userenrols_plugin::PLUGIN_NAME));
-                $this->_form->setDefault(local_userenrols_plugin::FORMID_GROUP, 0);
+                $this->_form->setDefault(local_userenrols_plugin::FORMID_GROUP, 1); //'Yes' como default
                 $this->_form->addHelpButton(local_userenrols_plugin::FORMID_GROUP, 'LBL_GROUP', local_userenrols_plugin::PLUGIN_NAME);
+                $this->_form->disabledIf(local_userenrols_plugin::FORMID_GROUP, local_userenrols_plugin::FORMID_ROLE_ID, 'eq', '0');
 
                 // Group id selection
                 $groups = array(0 => get_string('LBL_NO_GROUP_ID', local_userenrols_plugin::PLUGIN_NAME));
