@@ -56,7 +56,7 @@
             }
 
 
-            $this->_form->addElement('header', 'identity', get_string('LBL_IDENTITY_OPTIONS', local_userenrols_plugin::PLUGIN_NAME));
+            //$this->_form->addElement('header', 'identity', get_string('LBL_IDENTITY_OPTIONS', local_userenrols_plugin::PLUGIN_NAME));
 
             // The userid field name drop down list
             $this->_form->addElement('select', local_userenrols_plugin::FORMID_USER_ID_FIELD, get_string('LBL_USER_ID_FIELD', local_userenrols_plugin::PLUGIN_NAME), $this->_customdata['data']->user_id_field_options);
@@ -64,7 +64,7 @@
             $this->_form->addHelpButton(local_userenrols_plugin::FORMID_USER_ID_FIELD, 'LBL_USER_ID_FIELD', local_userenrols_plugin::PLUGIN_NAME);
 
 
-            $this->_form->addElement('header', 'identity', get_string('LBL_ENROLL_OPTIONS', local_userenrols_plugin::PLUGIN_NAME));
+            //$this->_form->addElement('header', 'identity', get_string('LBL_ENROLL_OPTIONS', local_userenrols_plugin::PLUGIN_NAME));
 
             // The role id drop down list. The get_assignable_roles returns an assoc. array
             // with integer keys (role id) and role name values, so it looks like a sparse
@@ -82,7 +82,7 @@
             if ($this->_customdata['data']->canmanagegroups) {
 
                 // Process groups
-                $this->_form->addElement('header', 'identity', get_string('LBL_GROUP_OPTIONS', local_userenrols_plugin::PLUGIN_NAME));
+                //$this->_form->addElement('header', 'identity', get_string('LBL_GROUP_OPTIONS', local_userenrols_plugin::PLUGIN_NAME));
 
                 $this->_form->addElement('selectyesno', local_userenrols_plugin::FORMID_GROUP, get_string('LBL_GROUP', local_userenrols_plugin::PLUGIN_NAME));
                 $this->_form->setDefault(local_userenrols_plugin::FORMID_GROUP, 0);
@@ -108,7 +108,7 @@
             }
 
             // File picker
-            $this->_form->addElement('header', 'identity', get_string('LBL_FILE_OPTIONS', local_userenrols_plugin::PLUGIN_NAME));
+            //$this->_form->addElement('header', 'identity', get_string('LBL_FILE_OPTIONS', local_userenrols_plugin::PLUGIN_NAME));
 
             $this->_form->addElement('filepicker', local_userenrols_plugin::FORMID_FILES, null, null, $this->_customdata['options']);
             $this->_form->addHelpButton(local_userenrols_plugin::FORMID_FILES, 'LBL_FILE_OPTIONS', local_userenrols_plugin::PLUGIN_NAME);
