@@ -80,15 +80,15 @@
 Utilize este plugin para importar utilizadores a partir de um ficheiro de dados delimitados por vírgulas
 para os grupos de uma unidade. Com este plugin não são criados novos utilizadores nem são realizadas novas inscrições na unidade.<br />
 <br />
-Se em cada linha do ficheiro especificar o nome de um grupo junto com o identificador do utilizador então o utilizador
-será associado ao respetivo grupo. Se o grupo especificado ainda não existir na unidade tem a opção de criar esse grupo.
+Se em cada linha do ficheiro especificar o nome de um grupo bem como o identificador do utilizador então o utilizador
+será associado ao respetivo grupo. Se o grupo especificado não existir na unidade tem a opção de criar esse grupo.
 </p>
 
 <ul>
   <li>Cada linha do ficheiro de importação representa um registo de utilizador num grupo</li>
   <li>Cada registo deverá conter a identificação do utilizador, seja o nome de utilizador, o endereço de e-mail, ou o idnumber.</li>
   <li>Cada registo poderá conter opcionalmente um campo com o nome do grupo, separado por um carater que pode ser uma vírgula, ponto e vírgual, ou tab.</li>
-  <li>Evitar usar vírgulas ou pontos e vírgulas no nome dos grupos especificados, caso contrário deverá colocar o nome entre aspas</li>
+  <li>Evitar usar vírgulas ou pontos e vírgulas no nome dos grupos especificados, caso contrário deverá colocar no ficheiro o nome do grupo entre aspas</li>
   <li>Linhas em branco no ficheiro não serão interpretadas</li>
   <li>Nota: Não serão inscritos novos utilizadores na unidade.</li>
 </ul>
@@ -99,14 +99,14 @@ Nas meta unidades as importações de utilizadores serão efetuadas normalmente 
 
 <h3>Exemplos</h3>
 
-Idnumber e nome do grupo
+Idnumber do utilizador e nome do grupo
 <pre>
 202111111;Tuesday Laborary
 202111113;Wednesday Laborary
 202111114;Wednesday Laborary
 </pre>
 
-Endereço de E-mail
+Endereço de E-mail do utilizador e nome do grupo
 <pre>
 janedoe@university.edu, "Honors"
 alan.jones@university.edu, "HonorsPlus"
